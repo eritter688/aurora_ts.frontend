@@ -17,19 +17,23 @@ ACCOUNT SETTINGS
 
 export default function NavPane() {
 
+    const tempClick = () => {
+        console.log('button clicked');
+    };
+
 
     return (
         <div className={"nav-pane"}>
             <section className={"nav-pane-logo"}>
-                <p>LOGO</p>
+                <p>L</p>
             </section>
             <section className={"nav-pane-buttons"}>
-                <NavButton text={"Dashboard"}/>
-                <NavButton text={"Students"}/>
-                <NavButton text={"Families"}/>
+                <NavButton text={"Dashboard"} onClick={tempClick}/>
+                <NavButton text={"Students"} onClick={tempClick}/>
+                {/*<NavButton text={"Families"} onClick={tempClick}/>*/}
             </section>
             <section className={"nav-pane-settings"}>
-                <p>SETTINGS</p>
+                <p>S</p>
             </section>
         </div>
     );

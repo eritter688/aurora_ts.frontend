@@ -1,29 +1,56 @@
+@media (min-width: 576px) {
+    .nav-pane {
+        width: 30vw;
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-pane {
+        width: 30vw;
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-pane {
+        width: 30vw;
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-pane {
+        width: 30vw;
+        max-width: 200px;
+    }
+}
+
 .nav-pane {
     --nav-pane-base-color: white;
     --nav-button-base-color: white;
-    --nav-button-hover-color: cornflowerblue;
-    --nav-button-content-base-color: black;
-    --nav-button-content-hover-color: white;
+    --nav-button-content-base-color: #7C7F84;
+    --nav-button-hover-color: #F5F8FE;
+    --nav-button-content-hover-color: #303778;
 
-    width: 30vw; /* min/max */
-    max-width: 200px;
+    width: 15vw;
+
     height: 100vh;
     background-color: var(--nav-pane-base-color);
 
-
     display: grid;
-    grid-template-rows: 10% auto 10%;
+    grid-template-rows: 10% auto 10% 10%;
     grid-template-areas:
             "logo"
             "buttons"
-            "settings";
+            "settings"
+            ".";
     justify-items: center;
 }
 
 .nav-pane-logo {
     grid-area: logo;
     width: 100%;
-
 }
 
 .nav-pane-buttons {

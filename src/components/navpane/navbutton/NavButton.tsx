@@ -1,14 +1,15 @@
 import React from 'react';
 import './navbutton.css';
 
-import {ReactComponent as DashboardLogo} from '../../../assets/svg/chart.svg';
+import {ReactComponent as DashboardLogo} from '../../../assets/svg/dashboard.svg';
 import {ReactComponent as StudentLogo} from '../../../assets/svg/student.svg';
 
 type NavButtonProps = {
     text: string,
+    onClick: () => void,
 }
 
-export default function NavButton({text}: NavButtonProps) {
+export default function NavButton({text, onClick}: NavButtonProps) {
 
     const selectIcon = () => {
         switch (text) {
@@ -25,7 +26,7 @@ export default function NavButton({text}: NavButtonProps) {
     };
 
     return (
-        <button className={'nav-button'}>
+        <button className={'nav-button'} onClick={onClick}>
             <div className={'nav-button-content'}>
                 {selectIcon()}
                 <p className={'nav-button-text'}>{text}</p>
