@@ -2,6 +2,7 @@ import React from 'react';
 import './navbutton.css';
 
 import {ReactComponent as DashboardLogo} from '../../../assets/svg/dashboard.svg';
+import {ReactComponent as SettingsLogo} from '../../../assets/svg/settings.svg';
 import {ReactComponent as StudentLogo} from '../../../assets/svg/student.svg';
 
 type NavButtonProps = {
@@ -16,11 +17,14 @@ export default function NavButton({text, onClick}: NavButtonProps) {
             case 'Dashboard': {
                 return <DashboardLogo className={'nav-button-icon'}/>;
             }
+            case 'Settings': {
+                return <SettingsLogo className={'nav-button-icon'}/>;
+            }
             case 'Students': {
                 return <StudentLogo className={'nav-button-icon'}/>;
             }
             default: {
-                return <div/>;
+                throw new Error('Specified nav button not found.');
             }
         }
     };
