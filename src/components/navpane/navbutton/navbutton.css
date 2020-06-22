@@ -1,0 +1,49 @@
+.nav-button {
+    background-color: var(--nav-button-base-color);
+    color: var(--nav-button-content-base-color);
+
+    border: none;
+    border-radius: 2px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 85%;
+
+}
+
+.nav-button:hover {
+    background-color: var(--nav-button-hover-color);
+}
+
+.nav-button:hover * {
+    color: var(--nav-button-content-hover-color);
+    fill: var(--nav-button-content-hover-color);
+}
+
+.nav-button:focus {
+    outline: none;
+}
+
+.nav-button-content {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+        'icon text';
+    align-items: center;
+}
+
+.nav-button-icon {
+    grid-area: icon;
+    justify-self: center;
+    height: 1.3rem;
+    width: 1.3rem;
+    fill: black;
+}
+
+.nav-button-text {
+    grid-area: text;
+    justify-self: left;
+    margin-left: 1rem;
+}

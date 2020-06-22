@@ -1,0 +1,41 @@
+.nav-pane {
+    --nav-pane-base-color: white;
+    --nav-button-base-color: white;
+    --nav-button-hover-color: cornflowerblue;
+    --nav-button-content-base-color: black;
+    --nav-button-content-hover-color: white;
+
+    width: 30vw; /* min/max */
+    max-width: 200px;
+    height: 100vh;
+    background-color: var(--nav-pane-base-color);
+
+
+    display: grid;
+    grid-template-rows: 10% auto 10%;
+    grid-template-areas:
+            "logo"
+            "buttons"
+            "settings";
+    justify-items: center;
+}
+
+.nav-pane-logo {
+    grid-area: logo;
+    width: 100%;
+
+}
+
+.nav-pane-buttons {
+    grid-area: buttons;
+    width: 100%;
+
+}
+
+.nav-pane-settings {
+    grid-area: settings;
+    width: 100%;
+}
+
+
+
