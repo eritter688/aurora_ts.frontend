@@ -7,6 +7,7 @@ function App() {
 
     const divStyle: CSSProperties = {
         backgroundColor: '#FAFBFD',
+        // backgroundColor: 'blue',
         height: '100vh',
         width: '100vw',
         position: 'fixed',
